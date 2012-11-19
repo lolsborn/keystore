@@ -50,5 +50,4 @@ designed only with simplicity in mind.
 depends on github.com/mattn/go-sqlite3
 
 */
-
 package keystore
