@@ -25,6 +25,8 @@ func exists(path string) (bool, error) {
     return false, err
 }
 
+// returns a new keystore using a database at path, returns an error if there
+// was an issue opening the database file
 func NewKeystore(path string) (ks *Keystore, err error) {
 	ks = new(Keystore)
 	var created bool = false
@@ -41,10 +43,13 @@ func NewKeystore(path string) (ks *Keystore, err error) {
 	return ks, err
 }
 
+// returns a new keystore from default_db_path, returns an error if there
+// was an issue opening the database file
 func DefaultKeystore() (ks *Keystore, err error) {
 	return NewKeystore(default_db_path)
 }
 
+// deletes object / value for key
 func (ks *Keystore) Delete(key string) {
 	ks.db.Exec("DELETE FROM Settings WHERE key = ?", key)
 }

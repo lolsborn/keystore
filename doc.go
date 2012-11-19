@@ -15,11 +15,13 @@ designed only with simplicity in mind.
 	
 	// Get a keystore struct
 	ks, _ := DefaultKeystore()
+	// Close the keystore when we are finished
+	defer ks.Close()
 
 	// Save a string 
 	ks.PutString("mykey", "foo") 
 
-	// Fetch the string "foo" for key "mykeyy"
+	// Fetch the string "foo" for key "mykey"
 	bar := ks.GetString("mykey")
 */
 package keystore
