@@ -1,4 +1,4 @@
-/* (http://golang.org/doc/gopher/help.png)
+/* ![alt text](http://golang.org/doc/gopher/help.png)
 # Overview
 
 Keystore is a dead simple key-value store built using SQLite for Go.  It is
