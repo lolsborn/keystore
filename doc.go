@@ -47,7 +47,7 @@ designed only with simplicity in mind.
 
 ## Requirements
 
-depends on github.com/mattn/go-sqlite3
+depends on http://github.com/mattn/go-sqlite3
 
 */
 
