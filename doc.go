@@ -23,5 +23,32 @@ designed only with simplicity in mind.
 
 	// Fetch the string "foo" for key "mykey"
 	bar := ks.GetString("mykey")
+
+## Usage
+### string
+	ks.PutString("foo", "bar")
+	var ret string = ks.GetString("foo")
+
+### int
+	ks.PutInt("meaning", 42)
+	var meaning int = ks.GetInt("meaning")
+
+### interface{}
+	obj := &TestObj{}
+	obj.Bar = "asdfadfs"
+	obj.Foo = "Hello, 世界"
+	obj.Baz = 42
+
+	ks.PutObj("test.obj", obj)
+
+	out_obj := &TestObj{}
+	ks.GetObj("test.obj", out_obj)
+
+
+## Requirements
+
+depends on github.com/mattn/go-sqlite3
+
 */
+
 package keystore
