@@ -1,3 +1,4 @@
+/*
 # Overview
 
 Keystore is a dead simple key-value store built using SQLite for Go.  It is
@@ -20,4 +21,4 @@ designed only with simplicity in mind.
 
 	// Fetch the string "foo" for key "mykeyy"
 	bar := ks.GetString("mykey")
-
+*/
