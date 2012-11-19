@@ -22,3 +22,4 @@ designed only with simplicity in mind.
 	// Fetch the string "foo" for key "mykeyy"
 	bar := ks.GetString("mykey")
 */
+package keystore
