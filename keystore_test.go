@@ -26,7 +26,7 @@ func TestPutString(t *testing.T) {
 		t.Errorf(err.Error())
 	}
 	if ret != "bar2" {
-		t.Errorf("Expeccted bar2, but got %s", ret)
+		t.Errorf("Expected bar2, but got %s", ret)
 	}
 }
 
@@ -41,7 +41,7 @@ func TestPutInt(t *testing.T) {
 		t.Errorf(err.Error())
 	}
 	if ret != 55 {
-		t.Errorf("Expeccted 55, but got %d", ret)
+		t.Errorf("Expected 55, but got %d", ret)
 	}
 }
 
@@ -64,7 +64,7 @@ func TestNotFoundString(t *testing.T) {
 	_, err := ks.GetString("1ac62cc610fb4495920445ffc6ebea4a")
 
 	if err == nil { // Expect an error here
-		t.Errorf("expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
+		t.Errorf("Expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
 	}
 }
 
@@ -74,7 +74,7 @@ func TestNotFoundInt(t *testing.T) {
 	_, err := ks.GetInt("1ac62cc610fb4495920445ffc6ebea4a")
 
 	if err == nil { // Expect an error here
-		t.Errorf("expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
+		t.Errorf("Expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
 	}	
 }
 
@@ -85,7 +85,7 @@ func TestNotFoundObj(t *testing.T) {
 	err := ks.GetObj("1ac62cc610fb4495920445ffc6ebea4a", obj)
 
 	if err == nil { // Expect an error here
-		t.Errorf("expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
+		t.Errorf("Expected error fetching 1ac62cc610fb4495920445ffc6ebea4a")
 	}
 }
 
@@ -104,11 +104,11 @@ func TestPutObj(t *testing.T) {
 	obj2 := &TestObj{}
 	ks.GetObj("test.obj", obj2)
 	if obj2.Baz != obj.Baz {
-		t.Errorf("Expeccted %d, but got %d", obj.Baz, obj2.Baz)
+		t.Errorf("Expected %d, but got %d", obj.Baz, obj2.Baz)
 	}
 
 	if obj2.Foo != obj.Foo {
-		t.Errorf("Expeccted %s, but got %s", obj.Foo, obj2.Foo)
+		t.Errorf("Expected %s, but got %s", obj.Foo, obj2.Foo)
 	}
 }
 
